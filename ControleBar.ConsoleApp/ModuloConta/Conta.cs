@@ -42,11 +42,6 @@ namespace ControleBar.ConsoleApp.ModuloConta
         }
 
 
-        public void AdicionarPedidos()
-        {
-
-        }
-
         public void FecharConta()
         {
             if (contaAberta)
@@ -55,7 +50,7 @@ namespace ControleBar.ConsoleApp.ModuloConta
             }
         }
 
-       
+
     }
 }
 

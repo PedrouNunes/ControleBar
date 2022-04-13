@@ -4,17 +4,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ControleBar.ConsoleApp.ModuloPedido;
 using ControleBar.ConsoleApp.ModuloProduto;
 
-
-namespace ControleBar.ConsoleApp.ModuloPedido
+namespace ControleBar.ConsoleApp.ModuloConta
 {
-    public class Pedido 
+    public class TelaCadastroConta : TelaBase
     {
+        decimal total = 0;
         List<Produto> produtos;
-        decimal total;
 
-        public decimal CalcularPedido()
+        public TelaCadastroConta(string titulo) : base(titulo)
+        {
+        }
+
+        public void AdicionarPedido()
+        {
+            MostrarTitulo("Adicionando pedidos");
+
+        }
+
+        public decimal TotalConta()
         {
             foreach (Produto produto in produtos)
             {
@@ -23,4 +33,7 @@ namespace ControleBar.ConsoleApp.ModuloPedido
             return total;
         }
     }
+
+
 }
+
