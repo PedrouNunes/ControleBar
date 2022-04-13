@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ControleBar.ConsoleApp.ModuloProduto;
 
-
-namespace ControleBar.ConsoleApp.ModuloPedido
+namespace ControleBar.ConsoleApp
 {
-    public class Pedido : EntidadeBase
+    public class Pedido : TelaBase
     {
+        public Pedido(string titulo) : base(titulo)
+        {
+        }
+
 
     }
 }

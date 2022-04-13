@@ -1,5 +1,8 @@
 ﻿using ControleBar.ConsoleApp.ModuloGarcom;
 using System;
+using ControleBar.ConsoleApp.ModuloMesa;
+using ControleBar.ConsoleApp.ModuloPedido;
+using ControleBar.ConsoleApp.ModuloProduto;
 
 namespace ControleBar.ConsoleApp.Compartilhado
 {
@@ -7,11 +10,24 @@ namespace ControleBar.ConsoleApp.Compartilhado
     {
         private readonly IRepositorio<Garcom> repositorioGarcom;
         private readonly TelaCadastroGarcom telaCadastroGarcom;
-        
+
+        private readonly IRepositorio<Produto> repositorioProduto;
+        private readonly TelaCadastroProduto telaCadastroProduto;
+
+        private readonly IRepositorio<Mesa> repositorioMesa;
+        private readonly TelaCadastroMesa telaCadastroMesa;
+
         public TelaMenuPrincipal(Notificador notificador)
         {
             repositorioGarcom = new RepositorioGarcom();
             telaCadastroGarcom = new TelaCadastroGarcom(repositorioGarcom, notificador);
+
+            repositorioProduto = new RepositorioProduto();
+            telaCadastroProduto = new TelaCadastroProduto(repositorioProduto, notificador);
+
+            repositorioMesa = new RepositorioMesa();
+            telaCadastroMesa = new TelaCadastroMesa(repositorioMesa, notificador);
+
 
             PopularAplicacao();
         }
@@ -25,6 +41,10 @@ namespace ControleBar.ConsoleApp.Compartilhado
             Console.WriteLine();
 
             Console.WriteLine("Digite 1 para Gerenciar Garçons");
+
+            Console.WriteLine("Digite 2 para Gerenciar Mesas");
+
+            Console.WriteLine("Digite 3 para Gerenciar Produtos");
 
             Console.WriteLine("Digite s para sair");
 
@@ -43,10 +63,10 @@ namespace ControleBar.ConsoleApp.Compartilhado
                 tela = telaCadastroGarcom;
 
             else if (opcao == "2")
-                tela = null;
+                tela = telaCadastroMesa;
 
             else if (opcao == "3")
-                tela = null;
+                tela = telaCadastroProduto;
 
             else if (opcao == "4")
                 tela = null;
@@ -64,3 +84,4 @@ namespace ControleBar.ConsoleApp.Compartilhado
         }
     }
 }
+            

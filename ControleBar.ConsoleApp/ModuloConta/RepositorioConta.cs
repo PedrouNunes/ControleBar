@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControleBar.ConsoleApp
+namespace ControleBar.ConsoleApp.ModuloConta
 {
     public class RepositorioConta : RepositorioBase<Conta>
     {

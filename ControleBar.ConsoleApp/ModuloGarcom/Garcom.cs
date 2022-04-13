@@ -18,8 +18,8 @@ namespace ControleBar.ConsoleApp.ModuloGarcom
         public override string ToString()
         {
             return "Id: " + id + Environment.NewLine +
-                "Nome do garçom: " + Nome + Environment.NewLine +
-                "Gorjetas recebidas: R$" + Gorjeta + Environment.NewLine;
+            "Nome do garçom: " + Nome + Environment.NewLine +
+            "Gorjetas recebidas: R$" + Gorjeta + Environment.NewLine;
         }
 
         public void ReceberGorjeta(decimal gorjetaCalculada)

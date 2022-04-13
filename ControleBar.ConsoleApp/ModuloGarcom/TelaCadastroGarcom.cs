@@ -75,7 +75,7 @@ namespace ControleBar.ConsoleApp.ModuloGarcom
 
         public bool VisualizarRegistros(string tipoVisualizacao)
         {
-            if (tipoVisualizacao == "Tela")
+            if (tipoVisualizacao == "Tela") 
                 MostrarTitulo("Visualização de Garçons Cadastrados");
 
             List<Garcom> garcons = _repositorioGarcom.SelecionarTodos();

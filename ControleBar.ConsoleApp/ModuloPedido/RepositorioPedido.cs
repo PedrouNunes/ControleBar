@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControleBar.ConsoleApp.Compartilhado;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace ControleBar.ConsoleApp.ModuloPedido
 {
-    public class RepositorioPedido
+    public class RepositorioPedido : RepositorioBase<Pedido>
     {
+
     }
 }
