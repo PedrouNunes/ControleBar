@@ -15,8 +15,7 @@ namespace ControleBar.ConsoleApp.ModuloConta
     {
         public Garcom garcom;
         public Mesa mesa;
-        public Pedido pedido;
-        public Produto produto;
+        public List<Pedido> pedidos;
         private bool contaAberta;
 
         public Conta(Mesa mesa, Garcom garcom)
@@ -30,7 +29,7 @@ namespace ControleBar.ConsoleApp.ModuloConta
         public override string ToString()
         {
             return "Numero da mesa" + mesa.Numero + Environment.NewLine +
-                "Nome do produto: " + produto.Nome + Environment.NewLine +
+                
                 "Garçom da mesa: " + garcom.Nome;
         }
 
@@ -42,15 +41,21 @@ namespace ControleBar.ConsoleApp.ModuloConta
             }
         }
 
+
+        public void AdicionarPedidos()
+        {
+
+        }
+
         public void FecharConta()
         {
             if (contaAberta)
             {
                 contaAberta = false;
             }
-
         }
 
+       
     }
 }
 

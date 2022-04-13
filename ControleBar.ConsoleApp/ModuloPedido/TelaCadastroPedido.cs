@@ -11,6 +11,7 @@ namespace ControleBar.ConsoleApp
     {
         public Pedido(string titulo) : base(titulo)
         {
+
         }
 
 
