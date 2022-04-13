@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControleBar.ConsoleApp
+namespace ControleBar.ConsoleApp.ModuloPedido
 {
     public class RepositorioPedido
     {

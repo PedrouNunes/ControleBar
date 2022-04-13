@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControleBar.ConsoleApp
+namespace ControleBar.ConsoleApp.ModuloMesa
 {
     public class Mesa : EntidadeBase
     {
